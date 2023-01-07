@@ -4,7 +4,23 @@
  * @param {number[]} height
  * @return {number}
  */
-// Double loop method
+// 1. Using pointers
+var maxArea = function(heiht) {
+    let left = 0;
+    let right = height.length - 1;
+    let maxArea = 0;
+    while (left < right) {
+        maxArea = Math.max(maxArea, (right - left) * Math.min(height[left], height[right]));
+        if (height[left] < height[right]) {
+            left += 1;
+        } else {
+            right -= 1;
+        }
+    }
+    return maxArea;
+}
+
+// 2. Double loop method
 var maxArea = function(height) {
     let largestArea = 0;
     let n = height.length;
