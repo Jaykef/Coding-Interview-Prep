@@ -4,7 +4,7 @@
  * @param {number[]} height
  * @return {number}
  */
-// 1. Using pointers
+// 1. Using two-pointers
 var maxArea = function(heiht) {
     let left = 0;
     let right = height.length - 1;
